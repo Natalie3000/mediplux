@@ -40,7 +40,7 @@ jobs:
         GIT_USERNAME: ${{ secrets.GIT_USERNAME }}
         GIT_PASSWORD: ${{ secrets.GIT_PASSWORD }}
       run: |
-        git clone https://${GIT_USERNAME}:${GIT_PASSWORD}@https://github.com/Natalie3000/kubernetes-manifest.git
+        git clone https://${GIT_USERNAME}:${GIT_PASSWORD}@github.com/Natalie3000/kubernetes-manifest.git
         cd kubernetes-manifest/mediplux-yaml
         cat deployment.yaml
 
@@ -50,7 +50,7 @@ jobs:
         git config user.name ${GIT_USERNAME}
         git add .
         git commit -m "Updated the k8s.yaml with new image tag"
-        git push https://${GIT_USERNAME}:${GIT_PASSWORD}@https://github.com/Natalie3000/kubernetes-manifest.git HEAD:main
+        git push https://${GIT_USERNAME}:${GIT_PASSWORD}@github.com/Natalie3000/kubernetes-manifest.git HEAD:main
         
       
     
